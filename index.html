@@ -1,23 +1,69 @@
-<!-- The core Firebase JS SDK is always required and must be listed first -->
-<script src="https://www.gstatic.com/firebasejs/7.0.0/firebase-app.js"></script>
+<!doctype html>
+<html lang="en">
+    <head>
+        <title>Train Schedule HW</title>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="assets/style.css">
+        <script src="https://www.gstatic.com/firebasejs/6.6.1/firebase-app.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/6.0.4/firebase-database.js"></script>
+        <script src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js"></script>
+        <script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
+    </head>
+    <body>
+        <body>
+                <div id="schedule">
+                    <h1>Train Schedule</h1>
+                </div>
+                    <script src="assets/script.js"></script>
+                
+                        <table class="table">
+                            <thead>
+                                <tr>
+                                    <th>Train Name</th>
+                                    <th>Destination</th>
+                                    <th>Frequency(min)</th>
+                                    <th>Next Arrival</th>
+                                    <th>Minutes Away</th>
+                                </tr>
+                            </thead>
+        
+                        
+                            <tbody id="row">
+                            </tbody>
+                            
+                        </table>
+        
+                    <div id="add">
+                        <h3>Add Train</h3>
+                    </div>
 
-<!-- TODO: Add SDKs for Firebase products that you want to use
-     https://firebase.google.com/docs/web/setup#available-libraries -->
-<script src="https://www.gstatic.com/firebasejs/7.0.0/firebase-analytics.js"></script>
+                        <form>
+                            <div class="form-group">
+                                <label for="text">Train Name</label>
+                                <input type="text" class="form-control" id="train-name">
+                            </div>
+        
+                            <div class="form-group">
+                                <label for="text">Destination</label>
+                                <input type="text" class="form-control" id="destination">
+                            </div>
+        
+                            <div class="form-group">
+                                <label for="text">First Train Time (HH:mm - Military Time)</label>
+                                <input type="text" class="form-control" id="first-train">
+                            </div>
+        
+                            <div class="form-group">
+                                <label for="text">Frequency(min)</label>
+                                <input type="text" class="form-control" id="frequency">
+                            </div>
+        
+                            <button id="add-train">Submit</button>
 
-<script>
-  // Your web app's Firebase configuration
-  var firebaseConfig = {
-    apiKey: "AIzaSyDg5u56kIdSjp0cvsSVNompNWWRfqfrQhk",
-    authDomain: "trainschedule-d6a00.firebaseapp.com",
-    databaseURL: "https://trainschedule-d6a00.firebaseio.com",
-    projectId: "trainschedule-d6a00",
-    storageBucket: "",
-    messagingSenderId: "79292149699",
-    appId: "1:79292149699:web:2c0f81a41b4d0afabe9776",
-    measurementId: "G-EGM6LPVS6C"
-  };
-  // Initialize Firebase
-  firebase.initializeApp(firebaseConfig);
-  firebase.analytics();
-</script>
+                        </form>
+                      
+        </body>
+    </body>
+</html>
+
+
